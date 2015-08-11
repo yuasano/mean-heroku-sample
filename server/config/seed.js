@@ -7,6 +7,8 @@
 
 var Thing = require('../api/thing/thing.model');
 var User = require('../api/user/user.model');
+var Photo = require('../api/photo/photo.model');
+
 
 Thing.find({}).remove(function() {
   Thing.create({
@@ -32,11 +34,13 @@ Thing.find({}).remove(function() {
 
 User.find({}).remove(function() {
   User.create({
+    _id: '55c9f42fb549b3ab0f428cc3',
     provider: 'local',
     name: 'Test User',
     email: 'test@test.com',
     password: 'test'
   }, {
+    _id: '55c9f42fb549b3ab0f428cc4',
     provider: 'local',
     role: 'admin',
     name: 'Admin',
@@ -46,4 +50,28 @@ User.find({}).remove(function() {
       console.log('finished populating users');
     }
   );
+});
+
+Photo.find({}).remove(function() {
+  Photo.create({
+    name: 'Sample 1',
+    url: '',
+    owner: '55c9f42fb549b3ab0f428cc3',
+    share: true
+  }, {
+    name: 'Sample 2',
+    url: '',
+    owner: '55c9f42fb549b3ab0f428cc3'
+  }, {
+    name: 'Sample 3',
+    url: '',
+    owner: '55c9f42fb549b3ab0f428cc4',
+    share: true
+  }, {
+    name: 'Sample 4',
+    url: '',
+    owner: '55c9f42fb549b3ab0f428cc4'
+  }, function() {
+    console.log('finished populating photos');
+  });
 });
