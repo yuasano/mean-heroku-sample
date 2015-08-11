@@ -55,21 +55,21 @@ User.find({}).remove(function() {
 Photo.find({}).remove(function() {
   Photo.create({
     name: 'Sample 1',
-    url: '',
+    url: '/assets/images/sample1.jpg',
     owner: '55c9f42fb549b3ab0f428cc3',
     share: true
   }, {
     name: 'Sample 2',
-    url: '',
+    url: '/assets/images/sample2.jpg',
     owner: '55c9f42fb549b3ab0f428cc3'
   }, {
     name: 'Sample 3',
-    url: '',
+    url: '/assets/images/sample3.jpg',
     owner: '55c9f42fb549b3ab0f428cc4',
     share: true
   }, {
     name: 'Sample 4',
-    url: '',
+    url: '/assets/images/sample4.jpg',
     owner: '55c9f42fb549b3ab0f428cc4'
   }, function() {
     console.log('finished populating photos');
