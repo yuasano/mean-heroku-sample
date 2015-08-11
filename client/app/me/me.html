@@ -1,7 +1,16 @@
 <div ng-include="'components/navbar/navbar.html'"></div>
 
 <div class="container">
-  <div class="well"></div>
+  <div class="well">
+    <div ngf-drop ngf-select ng-model="file" class="drop-box"
+         ngf-drag-over-class="dragover" ngf-multiple="false" ngf-allow-dir="false"
+         ngf-accept="'image/*'">アップロードする画像をドラッグ＆ドロップしてください。</div>
+    <div ngf-no-file-drop>このブラウザではドラッグ＆ドロップがサポートされていません。</div>
+    <img ngf-src="file" ngf-default-src="'/assets/images/thumb.jpg'" ngf-accept="'image/*'">
+    <div>
+      <button type="button" class="btn btn-default" ng-click="upload($file)">アップロード</button>
+    </div>
+  </div>
 </div>
 
 <div class="container">
