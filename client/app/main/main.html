@@ -10,7 +10,7 @@
 <div class="container">
   <carousel interval="2000" no-wrap="false">
     <slide ng-repeat="photo in photos" active="photo.active">
-      <img ng-src="{{photo.url}}" style="margin:auto;">
+      <img ng-src="{{photo.url}}" class="carousel-img">
       <div class="carousel-caption">
         <p>{{slide.name}}</p>
       </div>
