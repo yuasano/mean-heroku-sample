@@ -1,7 +1,32 @@
+.photo {
+  padding: 15px;
+}
+
+.photo-img {
+  width: 100%;
+}
+
+.photo-button {
+  font-size: 26px;
+}
+
 .btn-delete {
   position: absolute;
-  top: 0;
-  right: 0;
-  color: darkred;
-  font-size: 26px;
+  top: 17px;
+  right: 21px;
+  color: red;
+}
+
+.btn-share {
+  position: absolute;
+  top: 17px;
+  left: 21px;
+}
+
+.is-public {
+  color: yellow;
+}
+
+.is-private {
+  color: grey;
 }

@@ -16,14 +16,21 @@
 <div class="container">
   <h4>私の写真</h4>
   <div class="row">
-    <div class="col-xs-6 col-md-3" ng-repeat="photo in photos">
-      <div class="btn-delete" ng-click="deletePhoto(photo)">
-       <span class="text-danger glyphicon glyphicon-remove-sign"></span>
+    <div class="col-xs-6 col-md-3 photo" ng-repeat="photo in photos">
+      <div class="photo-button btn-delete" ng-click="deletePhoto(photo)">
+       <span class="glyphicon glyphicon-remove-sign"></span>
       </div>
-      <div class="btn-share" ng-click="sharePhoto(photo)">
-        <span class="text-info glyphicon glyphicon glyphicon glyphicon-globe"></span>
+      <div class="photo-button btn-share" ng-click="sharePhoto(photo)">
+        <span class="glyphicon"
+          ng-class="{
+            'glyphicon-globe': photo.share,
+            'glyphicon-ban-circle': !photo.share,
+            'is-public': photo.share,
+            'is-private': !photo.share
+          }"
+        ></span>
       </div>
-      <img ng-src="{{photo.url}}">
+      <img class="photo-img" ng-src="{{photo.url}}">
     </div>
   </div>
 </div>
