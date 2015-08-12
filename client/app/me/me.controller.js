@@ -13,8 +13,9 @@ angular.module('sampleApp')
         var index = $scope.photos.indexOf(photo);
         $scope.photos.splice(index, 1);
       });
-    }
+    };
 
+    /* jshint unused: false */
     $scope.upload = function (file) {
       Upload.upload({
         url: '/api/photos/me',
