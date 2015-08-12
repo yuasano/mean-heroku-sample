@@ -30,3 +30,15 @@
 .is-private {
   color: grey;
 }
+
+.drop-box {
+  margin: 5px;
+  padding: 15px;
+  border: dotted 3px gray;
+  border-radius: 7px;
+}
+
+.preview-box {
+  max-height: 400px;
+  margin: 7px;
+}
