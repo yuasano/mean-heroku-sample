@@ -10,6 +10,7 @@ var PhotoSchema = new Schema({
     type: Schema.Types.ObjectId,
     ref: 'User'
   },
+  publicId: String,
   share: Boolean
 });
 

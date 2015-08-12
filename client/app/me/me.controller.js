@@ -17,14 +17,17 @@ angular.module('sampleApp')
 
     /* jshint unused: false */
     $scope.upload = function (file) {
-      Upload.upload({
-        url: '/api/photos/me',
-        file: file
-      }).success(function (data, status, headers, config) {
-        console.log('success :)');
-      }).error(function (data, status, headers, config) {
-        console.log('error status: ' + status);
-      });
+      if(file) {
+        Upload.upload({
+          url: '/api/photos/me',
+          method: 'POST',
+          file: file
+        }).success(function (data, status, headers, config) {
+          console.log('success :)');
+        }).error(function (data, status, headers, config) {
+          console.log('error status: ' + status);
+        });
+      }
     };
 
   });
