@@ -55,6 +55,23 @@ exports.upload = function(req, res) {
 
 };
 
+// 写真のステータスを変更する
+exports.changeState = function(req, res) {
+  Photo.findById(req.params.id, function (err, photo) {
+    if(err) { return handleError(res, err); }
+    if(!photo) { return res.status(404).send('Not Found'); }
+
+    // ステータスを変更する
+    photo.share = !photo.share;
+    console.log(photo.share);
+    photo.save(function(err) {
+      if(err) { return handleError(res, err); }
+      return res.status(200).send(photo);
+    });
+
+  });
+}
+
 // 写真を削除
 exports.destroy = function(req, res) {
   Photo.findById(req.params.id, function (err, photo) {

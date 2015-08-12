@@ -19,6 +19,7 @@ router.get('/', controller.showPublic);
 
 router.get('/me', auth.isAuthenticated(), controller.showPrivate);
 router.post('/me', auth.isAuthenticated(), multipartyMiddleware, controller.upload);
+router.put('/me/:id', auth.isAuthenticated(), controller.changeState);
 router.delete('/me/:id', auth.isAuthenticated(), controller.destroy);
 
 module.exports = router;

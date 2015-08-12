@@ -30,4 +30,11 @@ angular.module('sampleApp')
       }
     };
 
+    $scope.sharePhoto = function(photo) {
+      $http.put('/api/photos/me/' + photo._id).success(function (data) {
+        var index = $scope.photos.indexOf(photo);
+        $scope.photos[index] = data;
+      });
+    };
+
   });
