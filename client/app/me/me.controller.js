@@ -23,7 +23,8 @@ angular.module('sampleApp')
           method: 'POST',
           file: file
         }).success(function (data, status, headers, config) {
-          console.log('success :)');
+          $scope.photos.push(data);
+          $scope.file = null;
         }).error(function (data, status, headers, config) {
           console.log('error status: ' + status);
         });
