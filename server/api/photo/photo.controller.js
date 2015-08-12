@@ -51,7 +51,7 @@ exports.upload = function(req, res) {
 
     });
 
-  };
+  }
 
 };
 
