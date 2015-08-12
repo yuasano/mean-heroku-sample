@@ -9,7 +9,7 @@ angular.module('sampleApp')
     });
 
     $scope.deletePhoto = function (photo) {
-      $http.delete('/api/photos/me/' + photo._id).success(function (photos) {
+      $http.delete('/api/photos/me/' + photo._id).success(function () {
         var index = $scope.photos.indexOf(photo);
         $scope.photos.splice(index, 1);
       });
