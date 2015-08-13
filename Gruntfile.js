@@ -388,7 +388,8 @@ module.exports = function (grunt) {
       heroku: {
         options: {
           remote: 'heroku',
-          branch: 'master'
+          branch: 'master',
+          force: true
         }
       },
       openshift: {

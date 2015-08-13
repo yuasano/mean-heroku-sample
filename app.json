@@ -1,0 +1,24 @@
+{
+  "name": "Mean Heroku Sample App",
+  "description": "MeanスタックとHerokuを使ったWebサービス作成のデモです。",
+  "keywords": [
+    "mean",
+    "angular",
+    "node",
+    "mongodb",
+    "express"
+  ],
+  "addons": [
+    "cloudinary:starter",
+    "mongolab:sandbox",
+    "papertrail:choklad"
+  ],
+  "env": {
+    "NODE_ENV": "production",
+    "GOOGLE_ID": "",
+    "GOOGLE_SECRET": "",
+    "CLOUDINARY_NAME": "",
+    "CLOUDINARY_API_KEY": "",
+    "CLOUDINARY_API_SEACRET": ""
+  }
+}
