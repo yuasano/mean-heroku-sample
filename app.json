@@ -21,5 +21,8 @@
     "GOOGLE_SECRET": {
       "required": false
     }
+  },
+  "scripts": {
+    "postdeploy": "grunt buildcontrol:heroku"
   }
 }
