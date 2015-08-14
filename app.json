@@ -20,15 +20,6 @@
     },
     "GOOGLE_SECRET": {
       "required": false
-    },
-    "CLOUDINARY_NAME": {
-      "required": false
-    },
-    "CLOUDINARY_API_KEY": {
-      "required": false
-    },
-    "CLOUDINARY_API_SEACRET": {
-      "required": false
     }
   }
 }
