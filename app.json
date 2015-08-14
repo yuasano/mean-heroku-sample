@@ -15,10 +15,20 @@
   ],
   "env": {
     "NODE_ENV": "production",
-    "GOOGLE_ID": "",
-    "GOOGLE_SECRET": "",
-    "CLOUDINARY_NAME": "",
-    "CLOUDINARY_API_KEY": "",
-    "CLOUDINARY_API_SEACRET": ""
+    "GOOGLE_ID": {
+      "required": false
+    },
+    "GOOGLE_SECRET": {
+      "required": false
+    },
+    "CLOUDINARY_NAME": {
+      "required": false
+    },
+    "CLOUDINARY_API_KEY": {
+      "required": false
+    },
+    "CLOUDINARY_API_SEACRET": {
+      "required": false
+    }
   }
 }
