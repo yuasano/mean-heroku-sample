@@ -1,11 +1,15 @@
 var config = require('../config/environment');
 var cloudinary = require('cloudinary');
+var url = require('url');
 
-cloudinary.config({
-  cloud_name: process.env.CLOUDINARY_NAME,
-  api_key: process.env.CLOUDINARY_API_KEY,
-  api_secret: process.env.CLOUDINARY_API_SEACRET
-});
+var uri = url.parse(process.env.CLOUDINARY_URL, true)
+var config = {
+  cloud_name: uri.host,
+  api_key: uri.auth.split(":")[0],
+  api_secret: uri.auth.split(":")[1],
+};
+
+cloudinary.config(config);
 
 function upload(file) {
   return cloudinary.uploader.upload(file);
